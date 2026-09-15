@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rally Attribution 2026 — ทำไมหุ้นขึ้น และตัวไหนมีโอกาสขึ้นอีก</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#121821; --panel2:#171f2b; --line:#243040;
+    --tx:#e6edf6; --tx2:#93a4bb; --tx3:#61738c;
+    --up:#2ecc8f; --down:#ff6b6b; --warn:#f5b642; --acc:#4aa8ff; --acc2:#a97bff;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:"Segoe UI",Inter,-apple-system,"Noto Sans Thai",sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+  a{color:var(--acc)}
+
+  /* ---------- header ---------- */
+  header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:30px}
+  .eyebrow{font:600 11px/1 var(--mono);letter-spacing:.18em;color:var(--acc);
+    text-transform:uppercase;margin-bottom:12px}
+  h1{margin:0 0 8px;font-size:clamp(26px,4.2vw,40px);line-height:1.15;letter-spacing:-.02em}
+  .sub{color:var(--tx2);max-width:72ch;margin:0}
+  .asof{margin-top:14px;font:500 12px/1.5 var(--mono);color:var(--tx3)}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+  .kpi .k{font:600 10px/1 var(--mono);letter-spacing:.1em;color:var(--tx3);text-transform:uppercase}
+  .kpi .v{font:700 21px/1.25 var(--mono);margin-top:7px;letter-spacing:-.01em}
+  .kpi .n{font-size:11.5px;color:var(--tx3);margin-top:3px}
+
+  /* ---------- structure ---------- */
+  section{margin:46px 0 0}
+  h2{font-size:22px;margin:0 0 6px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  h2 .num{font:700 12px/1 var(--mono);color:var(--acc);background:rgba(74,168,255,.12);
+    border:1px solid rgba(74,168,255,.28);padding:5px 8px;border-radius:5px;flex:none}
+  .lede{color:var(--tx2);margin:0 0 20px;max-width:80ch}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin-bottom:15px}
+  .card h3{margin:0 0 4px;font-size:16.5px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .card .why{color:var(--tx2);font-size:14.5px;margin:8px 0 0}
+  .tag{font:600 10px/1 var(--mono);letter-spacing:.07em;text-transform:uppercase;
+    padding:4px 7px;border-radius:4px;flex:none}
+  .t-up{background:rgba(46,204,143,.13);color:var(--up);border:1px solid rgba(46,204,143,.3)}
+  .t-warn{background:rgba(245,182,66,.13);color:var(--warn);border:1px solid rgba(245,182,66,.3)}
+  .t-down{background:rgba(255,107,107,.13);color:var(--down);border:1px solid rgba(255,107,107,.3)}
+
+  .facts{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+  .facts li{display:flex;gap:11px;align-items:baseline;font-size:14.5px;color:var(--tx2)}
+  .facts li b{font:700 13.5px/1.5 var(--mono);color:var(--tx);flex:none;min-width:112px}
+
+  .kill{margin-top:15px;padding:11px 14px;border-left:3px solid var(--down);
+    background:rgba(255,107,107,.055);border-radius:0 7px 7px 0;font-size:14px;color:var(--tx2)}
+  .kill b{color:var(--down);font-weight:700}
+  .note{margin-top:15px;padding:11px 14px;border-left:3px solid var(--warn);
+    background:rgba(245,182,66,.055);border-radius:0 7px 7px 0;font-size:14px;color:var(--tx2)}
+  .note b{color:var(--warn);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Rally Attribution &middot; US Equities 2026</div>
+  <h1>ทำไมหุ้นถึงขึ้น<br>และตัวไหนมีโอกาสขึ้นอีก</h1>
+  <p class="sub">แยกแรงขับของตลาดปี 2026 ออกเป็นเครื่องยนต์ที่จับต้องได้ แล้วถามต่อทีละตัวว่า
+     “แรงที่ดันมันขึ้นยังอยู่ไหม” และ “ราคาซึมซับข่าวนั้นไปหมดแล้วหรือยัง”
+     ทุกตัวเลขในหน้านี้มีแหล่งอ้างอิงกำกับ ไม่มีเลขที่เดาเอง</p>
+  <div class="asof">ข้อมูลราคา ณ ปิดตลาด 11 ก.ย. 2026 &nbsp;|&nbsp; จัดทำ 13 ก.ย. 2026 &nbsp;|&nbsp; เพื่อการศึกษา ไม่ใช่คำแนะนำการลงทุน</div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="k">S&amp;P 500</div><div class="v">7,656.98</div><div class="n">ปิด 11 ก.ย. 2026</div></div>
+    <div class="kpi"><div class="k">YTD (ราคา)</div><div class="v" style="color:var(--up)">+11.8%</div><div class="n">+12.4% รวมปันผล</div></div>
+    <div class="kpi"><div class="k">จากจุดต่ำ 30 มี.ค.</div><div class="v" style="color:var(--up)">~+22%</div><div class="n">ต่ำกว่า high กลาง ส.ค. ~2%</div></div>
+    <div class="kpi"><div class="k">Fed Funds</div><div class="v">3.50–3.75%</div><div class="n">คงมาตลอดปี</div></div>
+    <div class="kpi"><div class="k">CPI (ส.ค.)</div><div class="v" style="color:var(--warn)">+3.4%</div><div class="n">core +0.3% MoM</div></div>
+    <div class="kpi"><div class="k">FOMC ถัดไป</div><div class="v" style="color:var(--warn)">15–16 ก.ย.</div><div class="n">มี dot plot ด้วย</div></div>
+  </div>
+</header>
+
+<section>
+  <h2><span class="num">ส่วนที่ 1</span> ทำไมหุ้นถึงขึ้น — เครื่องยนต์ 3 ตัว</h2>
+  <p class="lede">ปี 2026 ไม่ใช่ตลาดที่ “ขึ้นทั้งกระดาน” ดัชนี +11.8% แต่ข้างในแยกกันคนละทาง
+     พลังงาน +47.7% ขณะที่ Consumer Discretionary −5.0% แปลว่ามีแรงขับเฉพาะจุด ไม่ใช่สภาพคล่องท่วมตลาด
+     ถ้าแยกไม่ออกว่าแรงไหนดันตัวไหน ก็จะซื้อผิดตัวทั้งที่มองภาพใหญ่ถูก</p>
+
+  <div class="card">
+    <h3>เครื่องยนต์ 1 — ขาดแคลนหน่วยความจำจริง ๆ ไม่ใช่แค่ธีม <span class="tag t-up">แรงขับยังอยู่</span></h3>
+    <p class="why">นี่คือเหตุผลที่ตัวท็อปของปีเป็นหุ้นความจำเกือบทั้งกระดาน ไม่ใช่เพราะ “ตลาดเห่อ AI”
+       แต่เพราะของขาดจริงจนราคาสัญญาต้องขึ้น ซึ่งไหลเข้างบทันที</p>
+    <ul class="facts">
+      <li><b>Capex</b> ไฮเปอร์สเกลเลอร์ทุ่มเกิน 1 ล้านล้านดอลลาร์ในปี 2026 — มากกว่าแผนที่วางไว้เมื่อ ม.ค. 2026 เกินเท่าตัว</li>
+      <li><b>สัดส่วน</b> หน่วยความจำกินราว 30% ของ capex นั้น เทียบกับราว 8% ในปี 2023–24</li>
+      <li><b>ราคา</b> สัญญา DRAM ไตรมาส 1/2026 ขึ้น 90–95% เทียบไตรมาสก่อน</li>
+      <li><b>อุปทาน</b> ปี 2026 โตแค่ DRAM +16% / NAND +17% ต่ำกว่าค่าปกติในอดีต</li>
+      <li><b>อุปสงค์</b> ความต้องการบิต DRAM เร่งจาก 22% (2026) เป็น 36% (2027)</li>
+    </ul>
+    <div class="note"><b>จุดสำคัญ:</b> โรงงานเวเฟอร์ใช้เวลาสร้างเป็นปี ๆ อุปทานจึงตอบสนองไม่ทันก่อนปี 2028
+       UBS มองราคาจะกลับสู่ปกติช่วงปลายปี 2027 (NAND) และกลางปี 2028 (DRAM) ส่วน Deloitte มองว่าอาจตึงถึงปี 2029
+       และ SK Hynix เตือนว่าอาจลากยาวเลยปี 2030 — นี่คือเหตุผลเชิงกายภาพ ไม่ใช่เชิงอารมณ์</div>
+  </div>
+
+  <div class="card">
+    <h3>เครื่องยนต์ 2 — ค่าพรีเมียมสงครามในน้ำมัน <span class="tag t-warn">แรงขับยังอยู่ แต่เปราะ</span></h3>
+    <p class="why">พลังงานเป็นเซกเตอร์ที่ดีที่สุดของปี ด้วยเหตุผลที่ไม่เกี่ยวกับ AI เลยแม้แต่นิดเดียว
+       ความขัดแย้งสหรัฐ–อิสราเอล–อิหร่านตั้งแต่ ก.พ. 2026 ดันน้ำมันขึ้นเหนือ 100 ดอลลาร์ต่อบาร์เรล
+       บวกกับแรงกดดันเส้นทางขนส่งแถบช่องแคบฮอร์มุซ</p>
+    <ul class="facts">
+      <li><b>Energy YTD</b> +47.7% — นำอันดับสองอยู่ 17 จุดเปอร์เซ็นต์</li>
+      <li><b>โมเมนตัม</b> 1 เดือน +6.7% / 3 เดือน +14.9% / 1 ปี +50.8%</li>
+      <li><b>จุดตั้งต้น</b> เริ่มจากเซกเตอร์ที่ถูกที่สุดในกระดาน (P/E ราว 13 เท่า)</li>
+    </ul>
+    <div class="kill"><b>สิ่งที่ฆ่ามันได้:</b> พาดหัวข่าวหยุดยิงเพียงบรรทัดเดียว ตัวขับเป็นปัจจัยภายนอกล้วน ๆ
+       ขึ้นเร็วได้ ก็ลงเร็วได้เหมือนกัน</div>
+  </div>
+
+  <div class="card">
+    <h3>เครื่องยนต์ 3 — กำไรเป็นคนแบก ไม่ใช่การขยาย P/E <span class="tag t-up">โครงสร้างแข็งแรงสุด</span></h3>
+    <p class="why">ข้อนี้คือข้อที่คนมองข้ามมากที่สุด และเป็นข้อที่บวกที่สุดเชิงโครงสร้าง</p>
+    <ul class="facts">
+      <li><b>ไตรมาส 2/26</b> รายได้ +15% YoY, กำไร +53% YoY</li>
+      <li><b>ทั้งปี 2026</b> คาดกำไรโต +32% และปี 2027 อีก +15%</li>
+      <li><b>ไตรมาส 1/26</b> รายได้ +12% — สูงสุดนับตั้งแต่ปี 2022</li>
+      <li><b>รายเซกเตอร์</b> กำไรกลุ่มเทคโนโลยี +55% และ Communication Services +49%</li>
+    </ul>
+    <div class="note"><b>อ่านให้ออก:</b> ราคาดัชนีขึ้น 11.8% แต่กำไรขึ้น 53%
+       แปลว่าระหว่างที่ตลาด “ขึ้น” มันกลับ <em>ถูกลง</em> เมื่อเทียบกับกำไรล่วงหน้า
+       ตลาดที่ขึ้นเพราะกำไรจะทนแรงกระแทกได้ดีกว่าตลาดที่ขึ้นเพราะคนยอมจ่าย P/E แพงขึ้นมาก</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">ส่วนที่ 2</span> แรงต้าน — เหตุผลที่นี่ไม่ใช่ไฟเขียว</h2>
+  <p class="lede">น้ำมัน 100 ดอลลาร์ตัวเดียวกับที่ดัน Energy ขึ้น 47.7% คือตัวที่กำลังบีบให้เฟดต้อง
+     <strong>ขึ้น</strong>ดอกเบี้ย ไม่ใช่ลด นี่คือความย้อนแย้งใจกลางตลาดปีนี้</p>
+
+  <div class="card">
+    <h3>ตลาดพลิกจากราคา “ลดดอกเบี้ย” เป็น “ขึ้นดอกเบี้ย” <span class="tag t-down">ความเสี่ยงหลัก</span></h3>
+    <ul class="facts">
+      <li><b>ราคาตลาด</b> โอกาสขึ้น 25 bp วันที่ 16 ก.ย. — CME FedWatch เกิน 60%, Kalshi 57%, Polymarket 49%</li>
+      <li><b>ตัวจุดชนวน</b> CPI ส.ค. +3.4% YoY, core +0.3% MoM ร้อนกว่าคาด</li>
+      <li><b>พันธบัตร</b> ยีลด์ตัวยาวแตะระดับสูงสุดในรอบหลายปี</li>
+      <li><b>แรงงาน</b> ก.ค. −23,000 ตำแหน่ง (และปรับลด พ.ค.–มิ.ย.) แต่ ส.ค. +162,000, ว่างงาน 4.1%</li>
+      <li><b>ตลาดโหวตแล้ว</b> Consumer Discretionary −5.0% และ Comm Services −3.8% — สองเซกเตอร์เดียวที่ติดลบ</li>
+    </ul>
+    <div class="note"><b>อย่าเชื่อตัวเลขเดียว:</b> สามตลาดพนันให้ odds ไม่ตรงกัน (49–60%+)
+       สัญญาณจริงไม่ใช่ตัวเลขเป๊ะ ๆ แต่คือ <em>ทิศทางที่มันพลิก</em> — ต้นปีตลาดรอลดดอกเบี้ย ตอนนี้กำลังเถียงกันว่าจะขึ้นหรือไม่
+       และ 16 ก.ย. เป็นรอบที่มี dot plot ด้วย ความผันผวนจึงมาสองชั้น</div>
+  </div>
+
+  <div class="card" style="border-color:rgba(74,168,255,.35)">
+    <h3>สรุปนิสัยตลาดปีนี้: บาร์เบล ไม่ใช่กระทิงทั้งกระดาน</h3>
+    <p class="why">ปลายหนึ่งคือ <strong>ของที่ขาด</strong> (หน่วยความจำ, พลังงาน) ราคาขึ้นเพราะอุปทานตอบไม่ทัน
+       อีกปลายคือ <strong>คนที่ต้องจ่าย</strong> (ผู้บริโภค, สื่อ/โฆษณา) ที่โดนน้ำมันแพงและดอกเบี้ยสูงกินกำลังซื้อ
+       เงินไหลจากปลายหลังไปปลายแรกอย่างเป็นระบบตลอดปี — ตราบใดที่น้ำมันยังแพงและเฟดยังไม่ผ่อน โครงสร้างนี้จะยังอยู่</p>
+  </div>
+</section>
+
+<style>
+  .chart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .row{display:grid;grid-template-columns:170px 1fr 66px;gap:13px;align-items:center;margin-bottom:7px}
+  .row .lb{font-size:13.5px;color:var(--tx2);text-align:right;white-space:nowrap;
+    overflow:hidden;text-overflow:ellipsis}
+  .track{position:relative;height:22px;background:var(--panel2);border-radius:4px;overflow:hidden}
+  .zero{position:absolute;left:10.71%;top:0;bottom:0;width:1px;background:var(--tx3);opacity:.65;z-index:2}
+  .bar{position:absolute;top:3px;bottom:3px;border-radius:3px}
+  .bar.p{background:linear-gradient(90deg,rgba(46,204,143,.55),var(--up))}
+  .bar.n{background:linear-gradient(90deg,var(--down),rgba(255,107,107,.55))}
+  .row .vl{font:700 13px/1 var(--mono);text-align:right}
+  .axis{display:grid;grid-template-columns:170px 1fr 66px;gap:13px;margin-top:9px;
+    font:500 10.5px/1 var(--mono);color:var(--tx3)}
+  .axis .ax{display:flex;justify-content:space-between}
+
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  .tblwrap{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+  th{text-align:left;font:600 10.5px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    color:var(--tx3);padding:14px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:13px 16px;border-bottom:1px solid rgba(36,48,64,.55);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.n{font:700 14px/1.4 var(--mono);white-space:nowrap}
+  td.tk{font:700 13px/1.4 var(--mono);color:var(--tx);white-space:nowrap}
+  .up{color:var(--up)} .dn{color:var(--down)}
+</style>
+
+<section>
+  <h2><span class="num">ส่วนที่ 3</span> ผลตอบแทนรายเซกเตอร์ — ดูให้เห็นว่าใครขึ้นจริง</h2>
+  <p class="lede">ทั้ง 11 เซกเตอร์ของ S&amp;P 500 เรียงตามผลตอบแทนตั้งแต่ต้นปี ณ 11 ก.ย. 2026
+     ระยะห่างระหว่างอันดับ 1 กับอันดับสุดท้ายคือ 52.7 จุดเปอร์เซ็นต์ — นั่นไม่ใช่ตลาดเดียวกัน
+     แต่คือสองตลาดที่บังเอิญอยู่ในดัชนีเดียวกัน</p>
+  <div class="chart">
+    <div class="row"><div class="lb">Energy (XLE)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:85.18%"></div></div><div class="vl up">+47.7%</div></div>
+    <div class="row"><div class="lb">Technology (XLK)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:54.82%"></div></div><div class="vl up">+30.7%</div></div>
+    <div class="row"><div class="lb">Materials (XLB)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:23.75%"></div></div><div class="vl up">+13.3%</div></div>
+    <div class="row"><div class="lb">Industrials (XLI)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:20.89%"></div></div><div class="vl up">+11.7%</div></div>
+    <div class="row"><div class="lb">Real Estate (XLRE)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:16.61%"></div></div><div class="vl up">+9.3%</div></div>
+    <div class="row"><div class="lb">Cons. Staples (XLP)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:15.54%"></div></div><div class="vl up">+8.7%</div></div>
+    <div class="row"><div class="lb">Health Care (XLV)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:13.75%"></div></div><div class="vl up">+7.7%</div></div>
+    <div class="row"><div class="lb">Financials (XLF)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:9.64%"></div></div><div class="vl up">+5.4%</div></div>
+    <div class="row"><div class="lb">Utilities (XLU)</div><div class="track"><div class="zero"></div><div class="bar p" style="left:10.71%;width:1.07%"></div></div><div class="vl up">+0.6%</div></div>
+    <div class="row"><div class="lb">Comm. Services (XLC)</div><div class="track"><div class="zero"></div><div class="bar n" style="left:3.92%;width:6.79%"></div></div><div class="vl dn">−3.8%</div></div>
+    <div class="row"><div class="lb">Cons. Discret. (XLY)</div><div class="track"><div class="zero"></div><div class="bar n" style="left:1.78%;width:8.93%"></div></div><div class="vl dn">−5.0%</div></div>
+    <div class="axis"><div></div><div class="ax"><span>−6%</span><span>0</span><span>+22%</span><span>+50%</span></div><div></div></div>
+  </div>
+
+  <div class="tblwrap" style="margin-top:15px">
+    <table>
+      <thead><tr><th>เซกเตอร์</th><th>YTD</th><th>1 เดือน</th><th>3 เดือน</th><th>1 ปี</th><th>อ่านอย่างไร</th></tr></thead>
+      <tbody>
+        <tr><td class="tk">Energy</td><td class="n up">+47.7%</td><td class="n up">+6.7%</td><td class="n up">+14.9%</td><td class="n up">+50.8%</td><td>แรงทุกกรอบเวลา — เป็นเซกเตอร์เดียวที่บวกทั้ง 1 เดือน 3 เดือน และ 1 ปี</td></tr>
+        <tr><td class="tk">Technology</td><td class="n up">+30.7%</td><td class="n dn">−0.6%</td><td class="n up">+2.6%</td><td class="n up">+39.7%</td><td>กำไรของปีมาจากครึ่งแรก 3 เดือนหลังเริ่มแผ่ว</td></tr>
+        <tr><td class="tk">Health Care</td><td class="n up">+7.7%</td><td class="n dn">−1.8%</td><td class="n up">+7.8%</td><td class="n up">+22.5%</td><td>YTD ยังต่ำ แต่ 3 เดือนดีเป็นอันดับ 3 — โมเมนตัมเพิ่งกลับทิศ</td></tr>
+        <tr><td class="tk">Financials</td><td class="n up">+5.4%</td><td class="n dn">−1.2%</td><td class="n up">+9.2%</td><td class="n up">+9.4%</td><td>3 เดือนดีเป็นอันดับ 2 รองจากพลังงาน ทั้งที่ YTD เกือบรั้งท้าย</td></tr>
+        <tr><td class="tk">Comm. Services</td><td class="n dn">−3.8%</td><td class="n up">+2.1%</td><td class="n up">+0.7%</td><td class="n dn">−0.5%</td><td>ติดลบทั้งปี แต่ 1 เดือนเป็นบวกอันดับ 2 — สัญญาณชีพแรก</td></tr>
+        <tr><td class="tk">Cons. Discretionary</td><td class="n dn">−5.0%</td><td class="n dn">−4.2%</td><td class="n dn">−2.7%</td><td class="n dn">−2.2%</td><td>ติดลบทุกกรอบเวลา — ตลาดกำลังบอกว่าใครเป็นคนจ่ายค่าน้ำมัน</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">ส่วนที่ 4</span> ตัวที่ขึ้นแรงที่สุดของปี — และเพราะอะไร</h2>
+  <p class="lede">ห้าอันดับแรกของ S&amp;P 500 ณ 4 ก.ย. 2026 สี่ในห้าตัวมาจากเรื่องเดียวกัน
+     คือหน่วยความจำและโครงสร้างพื้นฐาน AI ส่วนอีกตัวเป็นเหตุผลเฉพาะตัวล้วน ๆ</p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr><th>#</th><th>หุ้น</th><th>YTD</th><th>สาเหตุที่ขึ้น</th><th>กลุ่มแรงขับ</th></tr></thead>
+      <tbody>
+        <tr><td class="n" style="color:var(--tx3)">1</td><td class="tk">SNDK · SanDisk</td><td class="n up">+536%</td><td>ราคา NAND พุ่งจากภาวะขาดแคลน ผู้ผลิตได้ประโยชน์เต็ม ๆ จากราคาที่ขึ้น โดยไม่ต้องเพิ่มปริมาณขาย</td><td>หน่วยความจำ</td></tr>
+        <tr><td class="n" style="color:var(--tx3)">2</td><td class="tk">MRNA · Moderna</td><td class="n up">+399%</td><td>ผลทดลองระยะท้ายของวัคซีนมะเร็ง mRNA เฉพาะบุคคลร่วมกับ Merck ออกมาดี ใช้คู่กับ Keytruda ลดความเสี่ยงการกลับมาเป็นซ้ำและการลุกลาม — หุ้นขึ้นเกินเท่าตัวในวันเดียว (19 ส.ค.)</td><td>เฉพาะตัว</td></tr>
+        <tr><td class="n" style="color:var(--tx3)">3</td><td class="tk">DELL · Dell</td><td class="n up">+306%</td><td>ยอดเซิร์ฟเวอร์ AI ตามงบลงทุนไฮเปอร์สเกลเลอร์ที่ทะลุ 1 ล้านล้านดอลลาร์</td><td>โครงสร้าง AI</td></tr>
+        <tr><td class="n" style="color:var(--tx3)">4</td><td class="tk">MU · Micron</td><td class="n up">+225%</td><td>ได้ทั้ง DRAM และ HBM — หน่วยความจำคิดเป็นราว 1 ใน 4 ของต้นทุนแร็ก AI ทั้งตัว</td><td>หน่วยความจำ</td></tr>
+        <tr><td class="n" style="color:var(--tx3)">5</td><td class="tk">STX · Seagate</td><td class="n up">+184%</td><td>ความต้องการพื้นที่เก็บข้อมูลสำหรับงาน AI ล้นไปถึงฮาร์ดดิสก์ความจุสูง</td><td>จัดเก็บข้อมูล</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><b>บทเรียนจากตารางนี้:</b> ตัวที่ขึ้นแรงที่สุดไม่ใช่เจ้าของโมเดล AI แต่เป็นคนขาย
+     <em>ของที่ขาด</em> ในห่วงโซ่ เมื่อของขาดและอุปทานเพิ่มไม่ทัน กำไรจะไปตกที่คนถือของ ไม่ใช่คนถือแบรนด์</div>
+</section>
+
+<style>
+  .tier{border-radius:12px;border:1px solid var(--line);background:var(--panel);
+    padding:20px 22px;margin-bottom:15px;position:relative;overflow:hidden}
+  .tier::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px}
+  .tier.a::before{background:var(--up)}
+  .tier.b::before{background:var(--acc)}
+  .tier.c::before{background:var(--tx3)}
+  .tier-hd{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-bottom:3px}
+  .tier-hd h3{margin:0;font-size:17px}
+  .tier .names{font:700 13px/1.5 var(--mono);color:var(--acc);margin:5px 0 11px}
+  .grade{font:700 10px/1 var(--mono);letter-spacing:.09em;text-transform:uppercase;
+    padding:4px 8px;border-radius:4px;flex:none}
+  .g-a{background:rgba(46,204,143,.13);color:var(--up);border:1px solid rgba(46,204,143,.3)}
+  .g-b{background:rgba(74,168,255,.13);color:var(--acc);border:1px solid rgba(74,168,255,.3)}
+  .g-c{background:rgba(97,115,140,.15);color:var(--tx2);border:1px solid rgba(97,115,140,.35)}
+  .qa{display:grid;gap:11px;margin-top:13px}
+  .qa div{font-size:14.5px;color:var(--tx2)}
+  .qa div b{display:block;font:600 10.5px/1 var(--mono);letter-spacing:.09em;
+    text-transform:uppercase;color:var(--tx3);margin-bottom:4px}
+
+  .riskgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:14px}
+  .risk{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:17px 19px}
+  .risk h4{margin:0 0 9px;font-size:15px;display:flex;align-items:center;gap:8px}
+  .risk p{margin:0;font-size:14px;color:var(--tx2)}
+  .dot{width:8px;height:8px;border-radius:50%;flex:none}
+
+  .srcs{font-size:13.5px;color:var(--tx2)}
+  .srcs li{margin-bottom:7px}
+  footer{margin-top:54px;padding-top:22px;border-top:1px solid var(--line);
+    font-size:12.5px;color:var(--tx3);line-height:1.75}
+  @media(max-width:700px){
+    .row,.axis{grid-template-columns:104px 1fr 58px;gap:9px}
+    .row .lb{font-size:11.5px}
+    .facts li{flex-direction:column;gap:2px}
+    .facts li b{min-width:0}
+  }
+</style>
+
+<section>
+  <h2><span class="num">ส่วนที่ 5</span> ตัวไหนมีโอกาสขึ้นอีก</h2>
+  <p class="lede">ไม่ได้คัดจาก “ตัวไหนขึ้นแรงสุด” เพราะนั่นคือการมองกระจกหลัง
+     แต่ถามสามคำถามกับทุกตัว: <strong>หนึ่ง</strong> แรงที่ดันมันขึ้นยังทำงานอยู่จริงไหม
+     <strong>สอง</strong> ราคาซึมซับเรื่องนั้นไปหมดแล้วหรือยัง
+     <strong>สาม</strong> อะไรคือสิ่งที่ทำให้ตรรกะนี้พัง ถ้าตอบข้อสามไม่ได้ แปลว่ายังไม่เข้าใจดีพอที่จะซื้อ</p>
+
+  <div class="tier a">
+    <div class="tier-hd"><span class="grade g-a">ชั้น A</span><h3>แรงขับยังทำงานเชิงกายภาพ</h3></div>
+    <div class="names">MU · SNDK · WDC · STX — กลุ่มหน่วยความจำ</div>
+    <div class="qa">
+      <div><b>แรงยังอยู่ไหม</b> อยู่ และกำลังเร่งขึ้น ความต้องการบิต DRAM เพิ่มจาก 22% ปีนี้เป็น 36% ในปี 2027
+        ขณะที่อุปทานปี 2026 โตแค่ 16–17% อุปทานจะตอบสนองไม่ทันก่อนปี 2028 เพราะสร้างโรงงานไม่ทัน
+        ยอดขายหน่วยความจำถูกคาดว่าจะทะลุ 1 ล้านล้านดอลลาร์ในปี 2027 จาก 2.3 แสนล้านในปี 2025</div>
+      <div><b>ราคาซึมซับไปแล้วแค่ไหน</b> เยอะแล้ว นี่คือประเด็นสำคัญที่สุด ขึ้นมา 184–536% แปลว่าจบช่วง
+        “ค้นพบ” ไปแล้ว จากนี้คือการเดิมพันว่า <em>การปรับประมาณการกำไรขึ้น</em> จะวิ่งชนะ
+        <em>การหด P/E</em> ได้หรือไม่ ไม่ใช่เกมเดียวกับตอนต้นปี และต้องยอมรับความผันผวนที่สูงกว่าเดิมมาก</div>
+      <div><b>อะไรทำให้พัง</b> หนึ่ง ไฮเปอร์สเกลเลอร์รายใดรายหนึ่งลดเป้า capex — ตัวเลขนี้คือเจ้าของชะตากรรมของทั้งชั้น A
+        สอง ปฏิทิน UBS มองราคากลับสู่ปกติปลายปี 2027 (NAND) และกลางปี 2028 (DRAM)
+        แปลว่าจุดสูงสุดของรอบเป็นโจทย์ของปี 2027 ไม่ใช่ปี 2026 — เวลายังเข้าข้าง แต่ไม่ได้เข้าข้างตลอดไป</div>
+    </div>
+  </div>
+
+  <div class="tier a">
+    <div class="tier-hd"><span class="grade g-a">ชั้น A</span><h3>ตัวขับอยู่นอกระบบ และยังไม่จบ</h3></div>
+    <div class="names">XLE · กลุ่มพลังงาน</div>
+    <div class="qa">
+      <div><b>แรงยังอยู่ไหม</b> อยู่ และไม่เกี่ยวกับวัฏจักร AI เลย ความขัดแย้งยังไม่คลี่คลาย น้ำมันยังเหนือ 100 ดอลลาร์
+        เป็นเซกเตอร์เดียวที่บวกครบทั้ง 1 เดือน 3 เดือน และ 1 ปี</div>
+      <div><b>ราคาซึมซับไปแล้วแค่ไหน</b> ขึ้นมา 47.7% แต่ยังเป็นเซกเตอร์ที่ P/E ต่ำที่สุดในกระดาน (ราว 13 เท่า)
+        เพราะฐานเดิมถูกมาก และคุณสมบัติพิเศษคือ <strong>ถ้าเฟดขึ้นดอกเบี้ยวันที่ 16 ก.ย. พลังงานเป็นหนึ่งในไม่กี่กลุ่มที่ไม่เดือดร้อน</strong>
+        — มันเป็นตัวป้องกันความเสี่ยงของพอร์ต ไม่ใช่แค่ตัวทำกำไร</div>
+      <div><b>อะไรทำให้พัง</b> ข่าวหยุดยิงบรรทัดเดียว จบเกม ตัวขับเป็นภูมิรัฐศาสตร์ล้วน ๆ
+        ซึ่งแปลว่าคุณต้องยอมรับว่าความเสี่ยงมาแบบกระโดด ไม่ใช่แบบค่อย ๆ ลง</div>
+    </div>
+  </div>
+
+  <div class="tier b">
+    <div class="tier-hd"><span class="grade g-b">ชั้น B</span><h3>ตัวที่ยังตามหลัง แต่ตัวเร่งเพิ่งจุดติด</h3></div>
+    <div class="names">XLF · กลุ่มการเงิน</div>
+    <div class="qa">
+      <div><b>ทำไมน่าสนใจ</b> YTD แค่ +5.4% (อันดับ 9 จาก 11) แต่ 3 เดือนล่าสุด +9.2% ดีเป็นอันดับสองรองจากพลังงาน
+        แปลว่าเงินเริ่มไหลเข้าแล้วทั้งที่ตัวเลขทั้งปียังดูน่าเบื่อ</div>
+      <div><b>จุดที่คนอื่นมองข้าม</b> นี่คือเซกเตอร์เดียวที่ <strong>การขึ้นดอกเบี้ยวันที่ 16 ก.ย. เป็นข่าวดี ไม่ใช่ความเสี่ยง</strong>
+        ดอกเบี้ยสูงนานขึ้นบวกกับยีลด์ตัวยาวที่สูงสุดในรอบหลายปี คือส่วนต่างดอกเบี้ยที่กว้างขึ้นตรง ๆ
+        ขณะที่ทั้งตลาดกำลังกลัวเหตุการณ์นี้ กลุ่มการเงินกลับรอรับมัน</div>
+      <div><b>อะไรทำให้พัง</b> ถ้าการขึ้นดอกเบี้ยมาพร้อมปัญหาคุณภาพสินเชื่อ หรือถ้าแรงงานที่กำลังเย็นตัว
+        (ก.ค. −23,000 ตำแหน่ง) กลายเป็นการปลดคนจริง ส่วนต่างดอกเบี้ยที่ได้มาจะถูกหนี้เสียกินหมด</div>
+    </div>
+  </div>
+
+  <div class="tier b">
+    <div class="tier-hd"><span class="grade g-b">ชั้น B</span><h3>โมเมนตัมกลับทิศ ขณะที่ตัวเลขทั้งปียังดูถูก</h3></div>
+    <div class="names">XLV · กลุ่มเฮลท์แคร์</div>
+    <div class="qa">
+      <div><b>ทำไมน่าสนใจ</b> YTD +7.7% ดูธรรมดา แต่ 3 เดือนล่าสุด +7.8% และ 1 ปี +22.5%
+        คือภาพของกลุ่มที่เพิ่งกลับตัวขึ้น ยังไม่ใช่กลุ่มที่วิ่งจนสุดแล้ว
+        และ Moderna +399% พิสูจน์ว่าตัวเร่งแบบพลิกหน้ามือเป็นหลังมือยังมีอยู่จริงในเซกเตอร์นี้</div>
+      <div><b>ข้อควรระวัง</b> นี่เป็นเกมเลือกตัว ไม่ใช่เกมซื้อทั้งเซกเตอร์ ผลการทดลองยาเป็นเหตุการณ์แบบ
+        ได้หมดหรือเสียหมด ซึ่งฟันได้ทั้งสองทาง ถ้าไม่มีเวลาตามงานวิจัยรายตัว ให้ถือผ่านกองทุนดัชนีเซกเตอร์
+        แล้วรับผลตอบแทนแบบค่าเฉลี่ยไป จะตรงกับความเป็นจริงมากกว่า</div>
+    </div>
+  </div>
+
+  <div class="tier c">
+    <div class="tier-hd"><span class="grade g-c">ชั้น C</span><h3>ถูกจริง แต่ยังสวนกระแส — ยังไม่ใช่ตอนนี้</h3></div>
+    <div class="names">XLY · Consumer Discretionary &nbsp;|&nbsp; XLC · Communication Services</div>
+    <div class="qa">
+      <div><b>ทำไมยังไม่ควรรีบรับ</b> มันติดลบเพราะมีเหตุผล น้ำมัน 100 ดอลลาร์คือภาษีที่เก็บจากผู้บริโภคโดยตรง
+        และดอกเบี้ยกำลังจะขึ้นอีก สองแรงนี้กดกำไรของทั้งสองกลุ่มพร้อมกัน การซื้อตอนนี้คือการเดิมพันว่า
+        ตัวเองรู้ดีกว่าตลาด ทั้งที่ยังไม่มีอะไรเปลี่ยน</div>
+      <div><b>สัญญาณที่ต้องรอ</b> ราคาน้ำมัน <em>ลง</em> ซึ่งแปลว่าข่าวหยุดยิง นั่นคือพาดหัวที่เอาไว้ตอบสนอง
+        ไม่ใช่เอาไว้เดาล่วงหน้า วันที่มันมา คุณจะยังมีเวลาซื้อ เพราะกำไรที่ฟื้นกินเวลาเป็นไตรมาส ไม่ใช่เป็นวัน</div>
+      <div><b>จุดที่ควรจับตา</b> Comm Services เป็นบวก 1 เดือนที่ +2.1% ดีเป็นอันดับสองรองจากพลังงาน
+        ทั้งที่ทั้งปียังติดลบ 3.8% — นั่นคือสัญญาณชีพแรก คุ้มที่จะใส่ watchlist แต่ยังไม่คุ้มที่จะใส่เงิน</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">ส่วนที่ 6</span> กระดานความเสี่ยง — อะไรที่จะทำให้ต้องคิดใหม่ทั้งหมด</h2>
+  <p class="lede">ทุกข้อสรุปข้างบนแขวนอยู่บนสามตัวแปรนี้ ถ้าตัวใดตัวหนึ่งเปลี่ยน ให้กลับมาอ่านหน้านี้ใหม่ทั้งหน้า</p>
+  <div class="riskgrid">
+    <div class="risk">
+      <h4><span class="dot" style="background:var(--down)"></span>FOMC 16 ก.ย. 2026</h4>
+      <p>ถ้าขึ้นดอกเบี้ย: กลุ่มการเงินและพลังงานรับได้ ส่วนหน่วยความจำและเทคโนโลยีอายุยาว
+         จะโดนกดจากอัตราคิดลดที่สูงขึ้น และรอบนี้มี dot plot ออกมาด้วย ความผันผวนจึงมาสองชั้น
+         ทั้งตัวการตัดสินใจและตัวคาดการณ์ข้างหน้า</p>
+    </div>
+    <div class="risk">
+      <h4><span class="dot" style="background:var(--warn)"></span>ข่าวหยุดยิง</h4>
+      <p>บาร์เบลทั้งอันพลิกทันที พลังงานลง ผู้บริโภคขึ้น เงินเฟ้อคลาย แรงกดดันให้เฟดขึ้นดอกเบี้ยหายไป
+         เป็นเหตุการณ์เดียวที่พลิกทั้งกระดานพร้อมกัน และไม่มีใครเดาเวลาได้</p>
+    </div>
+    <div class="risk">
+      <h4><span class="dot" style="background:var(--acc)"></span>เป้า capex ไฮเปอร์สเกลเลอร์</h4>
+      <p>ตัวเลขเดียวที่เป็นเจ้าของชะตากรรมของชั้น A ทั้งชั้น ตราบใดที่งบยังเพิ่ม ภาวะขาดแคลนก็ยังอยู่
+         วันที่มีรายใหญ่รายแรกพูดคำว่าชะลอ รอบนี้จบก่อนที่ตัวเลขอุปทานจะบอก</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">ส่วนที่ 7</span> แหล่งข้อมูล</h2>
+  <p class="lede">ทุกตัวเลขในหน้านี้มาจากรายงานสาธารณะที่ตรวจสอบย้อนกลับได้ ไม่มีตัวเลขที่ประมาณเอาเอง
+     ถ้าตัวเลขใดขัดกันระหว่างแหล่ง หน้านี้จะแสดงทั้งสองค่าแทนที่จะเลือกข้าง (เช่น odds ของ FOMC)</p>
+  <div class="card">
+    <ul class="srcs">
+      <li>ผลตอบแทนรายเซกเตอร์ ณ 11 ก.ย. 2026 — <a href="https://chartrow.com/sp500/sector-performance">ChartRow, S&amp;P 500 Sector Performance</a></li>
+      <li>ระดับดัชนีและผลตอบแทนตั้งแต่ต้นปี — <a href="https://www.slickcharts.com/sp500/returns/ytd">Slickcharts, S&amp;P 500 YTD Return</a></li>
+      <li>กำไรไตรมาส 2/26, เฟด, แรงงาน, เงินเฟ้อ — <a href="https://www.usbank.com/investing/financial-perspectives/market-news/is-a-market-correction-coming.html">U.S. Bank, Is a Market Correction Coming?</a> (11 ก.ย. 2026)</li>
+      <li>หุ้นที่ให้ผลตอบแทนดีที่สุดของปี ณ 4 ก.ย. 2026 — <a href="https://www.forbes.com/sites/investor-hub/article/stock-market-winners-losers-2026/">Forbes Investor Hub, Winners and Losers of 2026</a></li>
+      <li>งบลงทุนไฮเปอร์สเกลเลอร์และสัดส่วนหน่วยความจำ — <a href="https://www.digitaltoday.co.kr/en/view/45884/memory-to-account-for-30-percent-of-hyperscalers-capex-in-2026-on-ai-demand">Digital Today, Memory to Account for 30% of Hyperscaler Capex in 2026</a></li>
+      <li>อุปสงค์และอุปทานหน่วยความจำ ระยะเวลาที่ตึงตัว — <a href="https://www.deloitte.com/us/en/insights/industry/technology/why-memory-chip-crunch-is-greater-than-expected.html">Deloitte, Why the Memory Chip Crunch Is Greater Than Expected</a> และ <a href="https://www.idc.com/resource-center/blog/global-memory-shortage-crisis-market-analysis-and-the-potential-impact-on-the-smartphone-and-pc-markets-in-2026/">IDC, Global Memory Shortage Crisis</a></li>
+      <li>โอกาสการขึ้นดอกเบี้ยรอบ ก.ย. — <a href="https://www.chase.com/personal/investments/learning-and-insights/article/september-2026-rate-hike-now-expected-amid-energy-shocks">Chase, September 2026 Rate Hike Now Expected Amid Energy Shocks</a> และ <a href="https://defirate.com/prediction-markets/fed-decision-odds/">DeFi Rate, Fed Decision Odds</a></li>
+      <li>แรงขับของการฟื้นตัวช่วงฤดูร้อน — <a href="https://www.cnbc.com/2026/09/08/sp-500-posts-3percent-summer-rally-some-on-wall-street-see-more-coming.html">CNBC, S&amp;P 500 Posts 3% Summer Rally</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <strong style="color:var(--tx2)">ข้อจำกัดความรับผิดชอบ</strong> — หน้านี้เป็นการวิเคราะห์เพื่อการศึกษา
+  ไม่ใช่คำแนะนำการลงทุน ไม่ใช่การชักชวนให้ซื้อขายหลักทรัพย์ใด ๆ และไม่ได้คำนึงถึงสถานะการเงิน
+  ความสามารถในการรับความเสี่ยง หรือเป้าหมายของผู้อ่านรายใดเป็นการเฉพาะ<br>
+  ตัวเลขทั้งหมดตรึงไว้ที่วันที่ระบุกำกับ (ส่วนใหญ่คือราคาปิด 11 ก.ย. 2026) และจะล้าสมัยทันทีที่ตลาดเปิดรอบถัดไป
+  ผลตอบแทนในอดีตไม่ได้รับประกันผลตอบแทนในอนาคต โปรดตรวจสอบข้อมูลจากแหล่งต้นทางก่อนตัดสินใจใด ๆ ด้วยตนเองเสมอ<br>
+  <span style="color:var(--tx3)">Rally Attribution 2026 · จัดทำ 13 ก.ย. 2026 · หน้าเว็บนี้เป็นไฟล์เดียวจบ ไม่มีการเรียกข้อมูลภายนอกและไม่มีการเก็บข้อมูลผู้ใช้</span>
+</footer>
+
+</div>
+</body>
+</html>
